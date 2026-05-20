@@ -3,7 +3,7 @@
 ---
 1. [Library Branch General Information](https://data.urbandatacentre.ca/en/catalogue/city-toronto-library-branch-general-information) - tpl-branch-general-information-2023.csv
 
-2. [Library Workstation Usage](ttps://data.urbandatacentre.ca/en/catalogue/city-toronto-library-workstation-usage)- tpl-workstation-usage-annual-by-branch-2018-2023.csv
+2. [Library Workstation Usage](ttps://data.urbandatacentre.ca/en/catalogue/city-toronto-library-workstation-usage) - tpl-workstation-usage-annual-by-branch-2018-2023.csv
 
 3. [Library Circulation by Cardholder Type](https://data.urbandatacentre.ca/en/catalogue/city-toronto-library-circulation-by-cardholder-type) - library-circulation-by-cardholder-type.csv
 
