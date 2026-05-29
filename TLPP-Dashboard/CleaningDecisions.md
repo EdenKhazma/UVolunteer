@@ -1,8 +1,7 @@
 # DA-08 Toronto Library Partnership Dashboard
 ## Data Cleaning Decisions Log
 **Project:** Toronto Public Library Partnership Dashboard
-**Analyst:** [Your Name]
-**Last Updated:** 2026-05-24
+**Last Updated:** 2026-05-29
 
 ---
 
@@ -51,8 +50,8 @@
 | `KidsStop` | Signals branch serves children — relevant to youth programming |
 | `TeenCouncil` | Signals youth leadership already exists at branch |
 | `YouthHub` | Signals branch already serves youth audience |
-| `CLC` | [Your reason after investigation] |
-| `DIH` | [Your reason after investigation] |
+| `CLC` | Computer Learning Center |
+| `DIH` | Digitial Innovation Hubs |
 | `Workstations` | Signals digital literacy capacity |
 | `TPLNIA` | Flags Neighbourhood Improvement Areas — helps U+ identify underserved communities |
 
@@ -138,17 +137,3 @@
 
 ---
 
-## Outstanding Issues to Resolve
-- [ ] Investigate why `df_visits_agg` has 104 rows instead of 100
-- [ ] Decision on `nan` LocationName rows in events table
-- [ ] Confirm meaning of `CLC` and `DIH` columns
-- [ ] Decide on `Lat`, `Long`, `Address` — needed for dashboard map?
-- [ ] Complete aggregation of Registrations and Workstation tables
-
----
-
-## Notes for Next Analyst
-- Raw data preserved in original variables (no `_cl` suffix)
-- Events table matched to branch table via `LocationName` → `BranchName`
-- BranchCode is the primary join key for all other tables
-- TPLNIA = Neighbourhood Improvement Area flag (1 = underserved area)
