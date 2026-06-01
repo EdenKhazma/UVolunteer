@@ -1,7 +1,6 @@
 # DA-08 Toronto Library Partnership Dashboard
 ## Data Cleaning Decisions Log
 **Project:** Toronto Public Library Partnership Dashboard
-**Last Updated:** 2026-05-29
 
 ---
 
@@ -15,7 +14,7 @@
 ## Table 1: `tpl_BGI_2023` → `tpl_BGI_2023_cl`
 **Source:** TPL Branch General Information 2023
 **Original Shape:** 112 rows, 26 columns
-**Clean Shape:** 100 rows, ? columns
+
 
 ### Row Changes
 | Decision | Reason |
@@ -25,16 +24,16 @@
 ### Column Changes — Dropped
 | Column | Reason Dropped |
 |--------|---------------|
-| `Address` | [Your reason] |
+| `Address` | Not Relvent |
 | `PostalCode` | Redundant with Address |
-| `Lat` | [Your reason] |
-| `Long` | [Your reason] |
-| `WardName` | [Your reason] |
+| `Lat` | Not Relvent |
+| `Long` | Not Relvent |
+| `WardName` | Not Relvent |
 | `NBHDNo` | Redundant with NBHDName |
 | `WardNo` | Redundant with WardName |
 | `AdultLiteracyProgram` | Focuses on English literacy for adults 19+, not digital skills. A branch with this program is not a stronger U+ digital literacy partner than one without it. |
-| `LeadingReading` | [Your reason] |
-| `SquareFootage` | [Your reason] |
+| `LeadingReading` | Not Relvent |
+| `SquareFootage` | Not Relvent |
 | `PublicParking` | Not relevant to U+ partnership scoring |
 | `Website` | Manager can find this from branch name |
 | `Telephone` | Not relevant to U+ partnership scoring |
@@ -62,10 +61,7 @@
 **Original Shape:** 162 rows, 5 columns
 **Clean Shape:** 86 rows (after grouping by BranchCode)
 
-### Changes Made
-| Decision | Reason |
-|----------|--------|
-| Grouped by BranchCode | [Your reason] |
+
 
 ---
 
@@ -73,10 +69,7 @@
 **Source:** TPL Card Registrations Annual by Branch
 **Original Shape:** 1275 rows, 3 columns
 
-### Changes Made
-| Decision | Reason |
-|----------|--------|
-| [Your cleaning steps] | [Your reasons] |
+
 
 ---
 
@@ -91,14 +84,9 @@
 | Removed Junction Triangle events | Branch does not exist in 2023 branch data — cannot be linked to a physical branch for scoring |
 | Removed Junction Triangle - Closed events | Branch is closed and does not exist in branch data |
 | Renamed `Daniel G. Hill` to `Jane/Dundas` | Daniel G. Hill is the renamed version of Jane/Dundas branch. Events table uses new name (2026), branch table uses old name (2023). Standardized to match 2023 branch data. |
-| [Decision on nan LocationName] | [Your reason] |
 
-### Matching Results
-| Check | Count |
-|-------|-------|
-| Total unique location names in events | ? |
-| Exact matches with branch table | 92 |
-| Non-matching after fixes | 2 (Daniel G. Hill → fixed, nan → pending decision) |
+
+
 
 ---
 
@@ -111,7 +99,6 @@
 | Decision | Reason |
 |----------|--------|
 | Grouped by BranchCode, summed Visits | Need one row per branch for merging |
-| 104 rows vs expected 100 | [Investigate why 4 extra branch codes exist] |
 
 ---
 
@@ -119,10 +106,6 @@
 **Source:** TPL Workstation Usage Annual by Branch 2018-2023
 **Original Shape:** 592 rows, 3 columns
 
-### Changes Made
-| Decision | Reason |
-|----------|--------|
-| [Your cleaning steps] | [Your reasons] |
 
 ---
 
@@ -130,10 +113,5 @@
 **Source:** Library Circulation by Cardholder Type
 **Original Shape:** 675 rows, 4 columns
 
-### Changes Made
-| Decision | Reason |
-|----------|--------|
-| Grouped by Year, BranchCode, CardholderType | [Your reason] |
 
----
 
