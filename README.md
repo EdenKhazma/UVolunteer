@@ -119,11 +119,3 @@ Comprehensive data cleaning and decision documentation is available in `TLPP-Das
 - **HTML/CSS/JavaScript** - Dashboard visualization
 - **Sweetviz** - Automated data profiling
 
-## 📧 Contact & Credits
-
-**Project Lead:** Eden  
-**Purpose:** Supporting U+ digital literacy program expansion at Toronto Public Library branches
-
----
-
-*Last Updated: May 2026*
